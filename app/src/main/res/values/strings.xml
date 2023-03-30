@@ -1,10 +1,14 @@
 <resources>
     <string name="app_name">RecipePal</string>
     <string name="user_info_title">Hello!!!</string>
+    <string name="login_title">Login Here!</string>
+    <string name="signup_title">Sign Up Here!</string>
     <string name="user_name">Name</string>
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
     <string name="user_re_password">Re-Password</string>
+    <string name="login_btn">Login</string>
+    <string name="signup_btn">SignUp</string>
     <string name="user_submit">Submit</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
