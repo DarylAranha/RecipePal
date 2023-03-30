@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         recipeAdapter = RecipeAdapter(getRecipes())
         recipeList.adapter = recipeAdapter
 
-//        tabLayout.addTab(tabLayout.newTab().setText("Home"))/testing
+//        tabLayout.addTab(tabLayout.newTab().setText("Home"))/test
 //        tabLayout.addTab(tabLayout.newTab().setText("Grocery List"))
 //        tabLayout.addTab(tabLayout.newTab().setText("User Info"))
 
