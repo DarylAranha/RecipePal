@@ -14,6 +14,7 @@ class RecipeAdapter(private val recipes: List<Recipe>) :
     RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>(), Filterable {
 
     private var filteredRecipes: List<Recipe> = recipes
+    private var listener: OnRecipeClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -24,7 +25,13 @@ class RecipeAdapter(private val recipes: List<Recipe>) :
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = filteredRecipes[position]
         holder.recipeTitle.text = recipe.title
+
+        holder.itemView.setOnClickListener {
+            listener?.onRecipeClick(recipe)
+        }
     }
+
+
 
     override fun getItemCount(): Int {
         return filteredRecipes.size
@@ -58,5 +65,12 @@ class RecipeAdapter(private val recipes: List<Recipe>) :
                 notifyDataSetChanged()
             }
         }
+    }
+
+    interface OnRecipeClickListener {
+        fun onRecipeClick(recipe: Recipe)
+    }
+    fun setOnRecipeClickListener(listener: OnRecipeClickListener) {
+        this.listener = listener
     }
 }
