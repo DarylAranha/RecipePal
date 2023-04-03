@@ -62,35 +62,39 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener , RecipeAdapter.
         // Replace with your own data source
         return listOf(
             Recipe(
-                "Recipe 1",
-                listOf("Ingredient 1", "Ingredient 2", "Ingredient 3"),
-                "Instructions 1",
-                "https://www.example.com/image1.jpg"
+                "Avocado Toast",
+                listOf("1 slice bread", "1/2 avocado, mashed", "Salt and pepper, to taste"),
+                "1. Toast the bread to your desired level of crispiness.\n2. Spread the mashed avocado onto the toast.\n3. Sprinkle with salt and pepper, to taste.",
+                "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2F2018%2F07%2Fmain%2F1807w-avocado-toast-recipe.jpg%3Fitok%3D_dDi7ZQQ"
             ),
             Recipe(
-                "Recipe 2",
-                listOf("Ingredient 4", "Ingredient 5", "Ingredient 6"),
-                "Instructions 2",
-                "https://www.example.com/image2.jpg"
+                "Greek Yogurt Parfait",
+                listOf("1/2 cup Greek yogurt", "1/4 cup granola", "1/2 cup mixed berries"),
+                "1. In a small bowl or jar, layer the Greek yogurt, granola, and mixed berries.\n2. Repeat the layering until all ingredients are used up.\n3. Serve immediately.",
+                "https://simplyhomecooked.com/wp-content/uploads/2021/08/yogurt-parfait-4.jpg"
             ),
             Recipe(
-                "Recipe 3",
-                listOf("Ingredient 7", "Ingredient 8", "Ingredient 9"),
-                "Instructions 3",
-                "https://www.example.com/image3.jpg"
+                "One-Pot Pasta",
+                listOf("8 oz spaghetti", "1 can diced tomatoes", "2 cups water", "2 cloves garlic, minced", "1 tsp dried basil", "Salt and pepper, to taste"),
+                "1. In a large pot, combine the spaghetti, diced tomatoes, water, minced garlic, and dried basil.\n2. Bring to a boil, then reduce the heat to low and let simmer for 10-12 minutes, or until the pasta is cooked through.\n3. Season with salt and pepper, to taste.\n4. Serve hot, garnished with grated Parmesan cheese, if desired.",
+                "https://www.jocooks.com/wp-content/uploads/2022/09/one-pot-pasta-1-11.jpg"
             ),
             Recipe(
-                "Recipe 4",
-                listOf("Ingredient 10", "Ingredient 11", "Ingredient 12"),
-                "Instructions 4",
-                "https://www.example.com/image4.jpg"
+                "Banana Smoothie",
+                listOf("1 ripe banana", "1/2 cup milk", "1/2 cup plain Greek yogurt", "1 tsp honey"),
+                "1. In a blender, combine the banana, milk, Greek yogurt, and honey.\n2. Blend until smooth and creamy.\n3. Serve immediately.",
+                "https://www.thespruceeats.com/thmb/67fUhzexgkuAZZkNPCzN_L54Vn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/banana-smoothie-recipes-759606-hero-01-d2abaa79f3204030a0ec0a8940456acc.jpg"
             ),
             Recipe(
-                "Recipe 5",
-                listOf("Ingredient 13", "Ingredient 14", "Ingredient 15"),
-                "Instructions 5",
-                "https://www.example.com/image5.jpg"
+                "Baked Chicken",
+                listOf("4 boneless, skinless chicken breasts", "2 tbsp olive oil", "1 tsp paprika", "1 tsp garlic powder", "Salt and pepper, to taste"),
+                "1. Preheat the oven to 400°F.\n2. Place the chicken breasts in a baking dish and brush with olive oil.\n3. Sprinkle the paprika, garlic powder, salt, and pepper over the chicken.\n4. Bake for 20-25 minutes, or until the chicken is cooked through and no longer pink in the middle.\n5. Serve hot, garnished with fresh herbs or lemon wedges, if desired.",
+                "https://therecipecritic.com/wp-content/uploads/2021/07/bakedchicken-1-500x375.jpg"
             )
+
+
+
+
         )
     }
 
