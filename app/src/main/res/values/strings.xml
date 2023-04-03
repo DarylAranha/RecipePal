@@ -10,5 +10,7 @@
     <string name="login_btn">Login</string>
     <string name="signup_btn">SignUp</string>
     <string name="user_submit">Submit</string>
+    <string name="recipe_title">Title</string>
+    <string name="recipe_desc">Description</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
