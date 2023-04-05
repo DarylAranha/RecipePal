@@ -49,7 +49,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener , RecipeAdapter.
         recipeAdapter.setOnRecipeClickListener(object : RecipeAdapter.OnRecipeClickListener {
             override fun onRecipeClick(recipe: Recipe) {
                 val bundle = bundleOf("recipe" to recipe)
-                navController?.navigate(R.id.action_homeFragment_to_recipeFragment, bundle);
+                navController?.navigate(R.id.action_loginFragment_to_homeFragment, bundle);
             }
         })
 
