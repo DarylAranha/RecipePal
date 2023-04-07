@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -19,8 +21,19 @@ class UserInformationFragment : Fragment() {
         // Hide the BottomNavigationView
         bottomNavigationView.visibility = View.VISIBLE
 
-        // fetch data from the database
-        // display the values
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeFragment -> {
+                    findNavController().navigate(R.id.homeFragment)
+                    true
+                }
+                R.id.userInformation -> {
+                    findNavController().navigate(R.id.userInformationFragment)
+                    true
+                }
+                else -> false
+            }
+        }
 
         return view
     }

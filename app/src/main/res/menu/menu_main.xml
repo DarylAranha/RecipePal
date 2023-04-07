@@ -4,8 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Recipe" />
+
+    <item
         android:id="@+id/userInformation"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@android:drawable/ic_menu_agenda"
         android:title="User Info" />
 
 </menu>

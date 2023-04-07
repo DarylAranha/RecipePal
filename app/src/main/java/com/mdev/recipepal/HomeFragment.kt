@@ -12,6 +12,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class HomeFragment : Fragment(), SearchView.OnQueryTextListener , RecipeAdapter.OnRecipeClickListener {
@@ -27,6 +28,27 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener , RecipeAdapter.
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav)
+
+        // Hide the BottomNavigationView
+        bottomNavigationView.visibility = View.VISIBLE
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeFragment -> {
+                    findNavController().navigate(R.id.homeFragment)
+                    true
+                }
+                R.id.userInformation -> {
+                    findNavController().navigate(R.id.userInformationFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+
+
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
         val navController = findNavController()// Set up the RecyclerView with the recipe list
         val recipeList = rootView.findViewById<RecyclerView>(R.id.recipeList)
@@ -49,7 +71,7 @@ class HomeFragment : Fragment(), SearchView.OnQueryTextListener , RecipeAdapter.
         recipeAdapter.setOnRecipeClickListener(object : RecipeAdapter.OnRecipeClickListener {
             override fun onRecipeClick(recipe: Recipe) {
                 val bundle = bundleOf("recipe" to recipe)
-                navController?.navigate(R.id.action_loginFragment_to_homeFragment, bundle);
+                navController?.navigate(R.id.action_homeFragment_to_recipeFragment, bundle);
             }
         })
 

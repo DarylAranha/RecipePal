@@ -7,8 +7,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.SearchView
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,16 +30,7 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_nav)
+
         bottomNavigation.setupWithNavController(navController)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-
-        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
-    }
-
-    fun hideBottomNavigation() {
-
     }
 }

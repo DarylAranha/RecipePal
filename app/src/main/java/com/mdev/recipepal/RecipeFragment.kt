@@ -49,5 +49,5 @@ class RecipeFragment : Fragment() {
         }
         return view
     }
-    }
+}
 

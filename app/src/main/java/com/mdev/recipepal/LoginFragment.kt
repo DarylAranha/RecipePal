@@ -57,7 +57,7 @@ class LoginFragment : Fragment() {
 //                        val action = LoginFragmentDirections.actionLoginFragmentToUserInformationFragment(emailAddress)
 //                        view.findNavController().navigate(action)
 
-                        view.findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
+                        view.findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     } else {
                         Toast.makeText(requireContext(), "Invalid User", Toast.LENGTH_LONG).show()
                     }
