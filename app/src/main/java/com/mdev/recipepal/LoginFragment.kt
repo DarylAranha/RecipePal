@@ -57,6 +57,16 @@ class LoginFragment : Fragment() {
 //                        val action = LoginFragmentDirections.actionLoginFragmentToUserInformationFragment(emailAddress)
 //                        view.findNavController().navigate(action)
 
+                        val sharedPref = requireActivity().getSharedPreferences("myAppPrefs", Context.MODE_PRIVATE)
+                        val editor = sharedPref.edit()
+
+                        editor.putString("email", emailAddress)
+                        editor.apply()
+
+                        cursor.close()
+
+                        db.close()
+
                         view.findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                     } else {
                         Toast.makeText(requireContext(), "Invalid User", Toast.LENGTH_LONG).show()
@@ -65,9 +75,6 @@ class LoginFragment : Fragment() {
             } else {
                 Toast.makeText(requireContext(), "User do not exist", Toast.LENGTH_LONG).show()
             }
-            cursor.close()
-
-            db.close()
         }
 
         val signUpButton = view.findViewById<Button>(R.id.btn_register)

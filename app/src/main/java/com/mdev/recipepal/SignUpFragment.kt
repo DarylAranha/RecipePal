@@ -61,6 +61,12 @@ class SignUpFragment : Fragment() {
 //                val action = SignUpFragmentDirections.actionSignUpFragmentToUserInformationFragment(emailAddress)
 //                view.findNavController().navigate(action)
 
+                val sharedPref = requireActivity().getSharedPreferences("myAppPrefs", Context.MODE_PRIVATE)
+                val editor = sharedPref.edit()
+
+                editor.putString("email", emailAddress)
+                editor.apply()
+
                 view.findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
             }
         }
